@@ -12,7 +12,7 @@ interface Props {
   onCanvasClick: (pixel: Pixel) => void;
 }
 
-const CANVAS_SIDE_SIZE = 600;
+const CANVAS_SIDE_SIZE = 400;
 
 export const ImgCanvas: FC<Props> = ({ image, onCanvasClick }) => {
   const canvas = useRef<HTMLCanvasElement>();
