@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lebusiness/canvas-1/static/css/main.964fdded.css",
+    "main.js": "/lebusiness/canvas-1/static/js/main.c0ab6758.js",
+    "static/js/453.68693753.chunk.js": "/lebusiness/canvas-1/static/js/453.68693753.chunk.js",
+    "index.html": "/lebusiness/canvas-1/index.html",
+    "main.964fdded.css.map": "/lebusiness/canvas-1/static/css/main.964fdded.css.map",
+    "main.c0ab6758.js.map": "/lebusiness/canvas-1/static/js/main.c0ab6758.js.map",
+    "453.68693753.chunk.js.map": "/lebusiness/canvas-1/static/js/453.68693753.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964fdded.css",
+    "static/js/main.c0ab6758.js"
+  ]
+}
