@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 import "./App.css";
 import { UploadFileInput } from "./components/UploadFileInput/UploadFileInput";
@@ -20,23 +20,17 @@ function App() {
   const [imgSrc, setImg] = useState<string>();
   const [rgb, setRgb] = useState<Pixel>();
 
-  const [, rerender] = useState<null>();
+  const [, rerender] = useState<object>();
 
-  const image = useMemo(() => new Image(), []);
+  const image = useMemo(() => {
+    const image = new Image();
+    image.addEventListener("load", () => rerender({}));
+    image.crossOrigin = "Anonymous";
+
+    return image;
+  }, [imgSrc]);
+
   image.src = imgSrc ?? "";
-  image.crossOrigin = "Anonymous";
-
-  useEffect(() => {
-    const rerenderCb = () => {
-      rerender(null);
-    };
-
-    image.addEventListener("load", rerenderCb);
-
-    return () => {
-      image.removeEventListener("load", rerenderCb);
-    };
-  }, [image]);
 
   return (
     <div className="App">
